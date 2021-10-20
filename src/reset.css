@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 100%;
+    outline: none;
 }
 
 a {
@@ -11,6 +12,12 @@ a {
 
 li {
     list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 html, body {
