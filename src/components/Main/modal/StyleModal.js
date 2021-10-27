@@ -197,6 +197,7 @@ export const ModalContainer = styled.div`
   }
 
   @media screen and (min-width: 600px) and (max-width: 1024px) {
+    height: calc(600px * 3);
     .modal__container {
       width: 85%;
     }
@@ -254,6 +255,7 @@ export const ModalContainer = styled.div`
             flex-direction: column;
             align-items: flex-start;
             padding-bottom: 10px;
+            overflow-x: hidden;
 
             h4 {
               margin: 10px 0 15px 0;
@@ -348,6 +350,7 @@ export const ModalSuccess = styled.div`
       padding: 30px 0;
       top: 40%;
       transform: translate(-50%, -30%);
+      overflow-x: hidden;
 
       h2 {
         margin: 25px 0;
