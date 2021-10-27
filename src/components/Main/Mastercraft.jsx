@@ -27,12 +27,7 @@ const MasterCraft = (props) => {
 
         {/*Buttons*/}
         <div className="master-craft__buttons">
-          <MainBtn
-            className="master-craft__backProject"
-            background
-            widthDefault
-            heigthDefault
-          >
+          <MainBtn className="master-craft__backProject" background>
             Back this project
           </MainBtn>
 

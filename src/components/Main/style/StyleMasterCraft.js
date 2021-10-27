@@ -22,7 +22,6 @@ export const StyleMasterCraft = styled.section`
       font-size: 1.5rem;
       font-weight: 700;
       width: 100%;
-      margin: 0 auto;
     }
 
     p {
@@ -41,6 +40,10 @@ export const StyleMasterCraft = styled.section`
       margin: 40px auto 40px auto;
       width: 94%;
 
+      .master-craft__backProject {
+        width: 190px;
+        height: 50px;
+      }
       .master-craft__bookmark-area {
         position: relative;
         background-color: #f4f8f9;
@@ -97,13 +100,14 @@ export const StyleMasterCraft = styled.section`
       top: -50px;
 
       h2 {
-        font-size: 20px;
-        width: 200px;
+        font-size: 18px;
+        width: 80%;
+        margin: 0 auto;
       }
 
       p {
-        width: 290px;
         margin: 30px auto 0 auto;
+        padding: 0 20px;
         font-size: 14px;
       }
 
@@ -121,7 +125,7 @@ export const StyleMasterCraft = styled.section`
 
         .master-craft__bookmark--gray {
           display: block;
-          margin: 0 20px;
+          margin: 0 30px 0 0;
         }
       }
     }

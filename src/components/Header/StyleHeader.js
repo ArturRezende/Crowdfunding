@@ -25,6 +25,7 @@ export const HeaderComponent = styled.header`
   //heros
   img {
     width: 100%;
+    display: block;
   }
   .header__heroDesktop {
     display: block;
