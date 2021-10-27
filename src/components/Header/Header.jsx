@@ -10,7 +10,9 @@ import heroDesktop from "./img/image-hero-desktop.jpg";
 
 const Header = (props) => {
   const [img, setImg] = useState(false);
-  const [controlMenu, setControlMenu] = useState(false);
+  const [controlMenu, setControlMenu] = useState({
+    fade: "fadeOut",
+  });
 
   return (
     <HeaderComponent className="header">
@@ -36,7 +38,15 @@ const Header = (props) => {
           className="header__showMenu"
           onClick={() => {
             setImg(!img);
-            setControlMenu(!controlMenu);
+            if (controlMenu.fade === "fadeOut") {
+              setControlMenu({ fade: "fadeIn" });
+              document.querySelector(".header__ul").style.display = "block";
+            } else {
+              setControlMenu({ fade: "fadeOut" });
+              setTimeout(() => {
+                document.querySelector(".header__ul").style.display = "none";
+              }, 1000);
+            }
           }}
         >
           <img
@@ -45,7 +55,7 @@ const Header = (props) => {
           />
         </button>
 
-        <ul className="header__ul" id={controlMenu ? "fadeIn" : "fadeOut"}>
+        <ul className={`header__ul ${controlMenu.fade}`}>
           <li>
             <a href=" #">About</a>
           </li>

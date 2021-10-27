@@ -53,12 +53,17 @@ export const HeaderComponent = styled.header`
       right: 120px;
       top: 50px;
       display: flex;
+      z-index: 97;
 
       li {
         a {
-          font-family: "Commissioner", sans-serif;
           font-weight: 500;
           color: #fff;
+          cursor: pointer;
+
+          &:hover {
+            color: #ececf4;
+          }
         }
       }
 
@@ -111,25 +116,32 @@ export const HeaderComponent = styled.header`
           margin-left: 0;
         }
       }
+
+      //animations
+      .fadeIn {
+        animation-name: ${fadeIn};
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        flex-direction: column;
+      }
+
+      .fadeOut {
+        animation-name: ${fadeOut};
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
     }
 
     .header__showMenu {
       display: block;
     }
-
-    //animations
-    #fadeIn {
-      animation-name: ${fadeIn};
-      animation-duration: 1s;
-      animation-fill-mode: both;
-      display: block;
-    }
-
-    #fadeOut {
-      animation-name: ${fadeOut};
-      animation-duration: 1s;
-      animation-fill-mode: both;
-      display: none;
-    }
   }
 `;
+
+(() => {
+  window.onresize = () => {
+    if (window.innerWidth > 601) {
+      document.querySelector(".header__ul").style.display = "flex";
+    }
+  };
+})();
