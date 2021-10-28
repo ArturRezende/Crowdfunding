@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.9478423d.chunk.css",
-    "main.js": "/static/js/main.35a0d9aa.chunk.js",
-    "main.js.map": "/static/js/main.35a0d9aa.chunk.js.map",
+    "main.css": "/static/css/main.ba774060.chunk.css",
+    "main.js": "/static/js/main.44c81f77.chunk.js",
+    "main.js.map": "/static/js/main.44c81f77.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a3ac482c.js",
     "runtime-main.js.map": "/static/js/runtime-main.a3ac482c.js.map",
     "static/js/2.90795a42.chunk.js": "/static/js/2.90795a42.chunk.js",
     "static/js/2.90795a42.chunk.js.map": "/static/js/2.90795a42.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.9478423d.chunk.css.map": "/static/css/main.9478423d.chunk.css.map",
+    "static/css/main.ba774060.chunk.css.map": "/static/css/main.ba774060.chunk.css.map",
     "static/js/2.90795a42.chunk.js.LICENSE.txt": "/static/js/2.90795a42.chunk.js.LICENSE.txt",
     "static/media/icon-bookmark-cyan.6c6172c6.svg": "/static/media/icon-bookmark-cyan.6c6172c6.svg",
     "static/media/icon-bookmark-gray.7777f8ec.svg": "/static/media/icon-bookmark-gray.7777f8ec.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.a3ac482c.js",
     "static/js/2.90795a42.chunk.js",
-    "static/css/main.9478423d.chunk.css",
-    "static/js/main.35a0d9aa.chunk.js"
+    "static/css/main.ba774060.chunk.css",
+    "static/js/main.44c81f77.chunk.js"
   ]
 }
