@@ -4,8 +4,10 @@ import "../../global-style.css";
 export const ModalContainer = styled.div`
   position: absolute;
   top: 0;
-  height: calc(100vh * 3);
-  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh + 70%);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 99;
   display: none;
@@ -196,15 +198,19 @@ export const ModalContainer = styled.div`
     }
   }
 
-  @media screen and (min-width: 600px) and (max-width: 1024px) {
-    height: calc(600px * 3);
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    height: calc(50vh + 65%);
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 1023px) {
+    height: calc(50vh + 73%);
     .modal__container {
       width: 85%;
     }
   }
 
   @media screen and (max-width: 600px) {
-    height: calc(100vh * 4);
+    height: calc(70vh + 85%);
     .modal__container {
       width: 85%;
       top: 50%;
