@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 //style - container
 import { StyleAboutArea } from "./style/StyleAboutArea";
@@ -9,8 +9,11 @@ import { StyleAboutCard } from "./style/StyleAboutArea";
 //style - global button
 import { MainBtn } from "./style/MainBtn";
 
+import { AppContext } from "../../data/Store";
+
 const AboutArea = (props) => {
   const [showModal, setShowModal] = useState(false);
+  const { openModal } = useContext(AppContext);
 
   return (
     <>
@@ -55,14 +58,7 @@ const AboutArea = (props) => {
                   onClick={() => {
                     setShowModal(() => {
                       if (!showModal) {
-                        document
-                          .querySelector(".modal")
-                          .classList.remove("fadeOutModal");
-                        document
-                          .querySelector(".modal")
-                          .classList.add("fadeInModal");
-                        document.querySelector(".modal").style.display =
-                          "block";
+                        openModal();
                       }
                     });
                   }}
@@ -96,14 +92,7 @@ const AboutArea = (props) => {
                   onClick={() => {
                     setShowModal(() => {
                       if (!showModal) {
-                        document
-                          .querySelector(".modal")
-                          .classList.remove("fadeOutModal");
-                        document
-                          .querySelector(".modal")
-                          .classList.add("fadeInModal");
-                        document.querySelector(".modal").style.display =
-                          "block";
+                        openModal();
                       }
                     });
                   }}
@@ -119,13 +108,7 @@ const AboutArea = (props) => {
               onClick={() => {
                 setShowModal(() => {
                   if (!showModal) {
-                    document
-                      .querySelector(".modal")
-                      .classList.remove("fadeOutModal");
-                    document
-                      .querySelector(".modal")
-                      .classList.add("fadeInModal");
-                    document.querySelector(".modal").style.display = "block";
+                    openModal();
                   }
                 });
               }}

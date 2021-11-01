@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { HeaderComponent } from "./StyleHeader";
 
 //images
@@ -13,6 +13,7 @@ const Header = (props) => {
   const [controlMenu, setControlMenu] = useState({
     fade: "fadeOut",
   });
+  const refNavbar = useRef(null);
 
   return (
     <HeaderComponent className="header">
@@ -40,11 +41,11 @@ const Header = (props) => {
             setImg(!img);
             if (controlMenu.fade === "fadeOut") {
               setControlMenu({ fade: "fadeIn" });
-              document.querySelector(".header__ul").style.display = "block";
+              refNavbar.current.style.display = "block";
             } else {
               setControlMenu({ fade: "fadeOut" });
               setTimeout(() => {
-                document.querySelector(".header__ul").style.display = "none";
+                refNavbar.current.style.display = "none";
               }, 1000);
             }
           }}
@@ -55,7 +56,7 @@ const Header = (props) => {
           />
         </button>
 
-        <ul className={`header__ul ${controlMenu.fade}`}>
+        <ul className={`header__ul ${controlMenu.fade}`} ref={refNavbar}>
           <li>
             <a href=" #">About</a>
           </li>
