@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import IconCheck from "../img/icon-check.svg";
 import { ModalSuccess } from "./StyleModal";
+import { useModal } from "../../../data/Store";
 
 const ModalSuccessComponent = (props) => {
-  const refSuccess = useRef(null);
+  const { ModalSuccessRef } = useModal();
   return (
-    <ModalSuccess className="modal-success" ref={refSuccess}>
+    <ModalSuccess className="modal-success" ref={ModalSuccessRef}>
       <div className="modal-success__container">
         <img src={IconCheck} alt="icon - check" />
         <h2>Thanks for your support!</h2>
@@ -17,10 +18,10 @@ const ModalSuccessComponent = (props) => {
         <button
           onClick={() => {
             if (props.modalSuccess === true) {
-              refSuccess.current.classList.remove("fadeInModal");
-              refSuccess.current.classList.add("fadeOutModal");
+              ModalSuccessRef.current.classList.remove("fadeInModal");
+              ModalSuccessRef.current.classList.add("fadeOutModal");
               setTimeout(() => {
-                refSuccess.current.style.display = "none";
+                ModalSuccessRef.current.style.display = "none";
               }, 1000);
 
               props.setModalSuccess(false);

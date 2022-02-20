@@ -9,13 +9,14 @@ import ModalPledge from "./ModalPledge";
 import ModalBlackEdition from "./ModalBlackEdition";
 import ModalMahoGany from "./ModalMahoGany";
 import ModalSuccessComponent from "./ModalSuccess";
+import { useModal } from "../../../data/Store";
 
 const Modal = (props) => {
   const [modalSuccess, setModalSuccess] = useState(false);
-
+  const { ModalRef } = useModal();
   return (
     <>
-      <ModalContainer className="modal">
+      <ModalContainer className="modal" ref={ModalRef}>
         <div className="modal__container">
           {/* card - title */}
           <ModalTitle />
